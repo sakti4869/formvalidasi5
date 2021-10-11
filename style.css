@@ -1,0 +1,105 @@
+.header {
+    text-align: center;
+    width: 55%;
+    margin: 3% auto;
+}
+
+h2, h6 {
+    font-weight: bold;
+    color: white;
+}
+
+body {
+    background-image: url("https://www.its.ac.id/wp-content/uploads/2019/02/GRAHAITS-02.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(1, 56, 128);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+.container {
+    background-color: rgb(128, 156, 192);
+    padding: 3%;
+    margin: 3% auto;
+    border-radius: 0.7rem;
+    box-shadow: 0 0 0 1px rgb(94, 129, 175), 
+                0 0 4px 4px rgb(35, 82, 145), 
+                0 0 12px 12px rgb(19, 70, 137), 
+                0 0 18px 18px rgb(6, 60, 131);
+}
+
+.btnFinish {
+    text-align: center;
+    margin-top: 10%;
+}
+
+.btnForm {
+    text-align: center;
+}
+
+.btnIsi {
+    background-color: rgb(241, 196, 15);
+    border-radius: 0.7rem;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    padding: 15px 20%;
+    margin: auto;
+}
+
+.btnIsi:hover {
+    background-color: rgb(243, 156, 18);
+}
+
+.btnSubmit {
+    background-color: rgb(241, 196, 15);
+    border-radius: 0.7rem;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    padding: 10px 50px;
+    margin: auto;
+}
+
+.btnSubmit:hover {
+    background-color: rgb(243, 156, 18);
+}
+
+.btnBack {
+    border-radius: 0.7rem;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    padding: 10px 50px;
+    margin: auto;
+    margin-left: 15px;
+}
+
+.footer {
+    text-align: center;
+    font-size: smaller;
+    margin: 25px auto;
+}
+
+.welcome {
+    padding: 10% 0;
+}
+
+.welcome:after {
+    content:'';
+    background: url('./FTEIC-Elektro.jpg') no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index:-1;
+    opacity: 0.1;
+}
+
+.logo-its {
+    margin-top: -20%;
+    margin-bottom: 10%;
+    float: left;
+}

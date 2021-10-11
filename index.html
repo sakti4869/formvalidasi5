@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="https://img-premium.flaticon.com/png/512/3357/premium/3357254.png?token=exp=1633509303~hmac=6b8a100ff938e8b09480bf5fab7b600e"/>
+    <title>Form Status Vaksinasi</title>
+    <script src="script.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="header col-4">
+        <h2>Form Status Vaksinasi Kuliah Tatap Muka FTEIC ITS 2021</h2>
+    </div>
+    <div class="container col-4">
+        <form name="formPendaftaran" action="" method="post" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label>Nama</label>
+                <input type="text" name="nama" placeholder="Nama lengkap" class="form-control" required maxlength="40" minlength="3">
+            </div>
+            <div class="form-group">
+                <label>NRP</label>
+                <input type="text" name="nrp" placeholder="NRP lengkap" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Email Aktif" class="form-control">
+                <small id="emailHelp" class="form-text text-muted"><span style="color: white; font-style: italic;">Email Akan Digunakan Untuk Mengirimkan Notifikasi.</span></small>
+            </div>
+            <div class="form-group">
+                <label>Jurusan</label>
+                <select name="jurusan" class="form-control">
+                    <option value="0">Pilih Jurusan</option>
+                    <option value="1">Teknik Informatika</option>
+                    <option value="2">Sistem Informasi</option>
+                    <option value="3">Teknologi Informasi</option>
+                    <option value="4">Teknik Biomedik</option>
+                    <option value="5">Teknik Elektro</option>
+                    <option value="6">Teknik Komputer</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Alamat</label>
+                <textarea name="alamat" id="" cols="30" rows="3" placeholder="Alamat Lengkap" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Apakah sudah menerima vaksinasi Covid-19?</label>
+                <select onchange="isVaksin()" name="ket-vaksin" class="form-control">
+                    <option value="0">Pilih Status Vaksin</option>
+                    <option value="1">Sudah</option>
+                    <option value="2">Belum</option>
+                </select>
+            </div>
+            <div id="sudah-vaksin" style="display: none;">
+                <h6>Informasi Sudah Vaksinasi</h6>
+                <hr>
+                <div class="form-group">
+                    <label>Jenis Vaksin</label>
+                    <select name="jenis-vaksin" class="form-control">
+                        <option value="0">Pilih Salah Satu</option>
+                        <option value="1">Sinovac</option>
+                        <option value="2">AstraZeneca</option>
+                        <option value="3">Novavax</option>
+                        <option value="4">Sinopharm</option>
+                        <option value="5">Moderna</option>
+                        <option value="6">Pfizer</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Dosis Ke</label>
+                    <input type="text" name="dosis" placeholder="" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Nomor Sertifikat</label>
+                    <input type="text" name="no-sertif" placeholder="" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Tanggal Vaksinasi</label>
+                    <input type="date" name="tgl-vaksin" placeholder="" class="form-control">
+                </div>
+            </div>
+            <div id="belum-vaksin" style="display: none;">
+                <h6>Informasi Belum Vaksinasi</h6>
+                <hr>
+                <div class="form-group">
+                    <label>Alasan Belum Vaksinasi</label>
+                    <select name="alasan-vaksin" class="form-control">
+                        <option value="0">Pilih Salah Satu</option>
+                        <option value="1">Mendapatkan serangan alergi berat, asma, atau lupus (dalam waktu kurang dari 3 bulan)</option>
+                        <option value="2">Sedang mendapatkan pengobatan untuk gangguan pembekuan darah, kelainan darah, dan defisiensi imun</option>
+                        <option value="3">Sedang mendapat pengobatan immunosupressan seperti kortikosteroid, kemoterapi, dan penerima produk darah/transfusi</option>
+                        <option value="4">Berstatus sebagai penyintas COVID-19 dalam waktu kurang dari 3 bulan</option>
+                        <option value="5">Belum ada program vaksinasi COVID-19 di wilayah tempat tinggal</option>
+                        <option value="6">Lain-lain (sebutkan)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Alasan Lain</label>
+                    <textarea name="alasan-lain" id="" cols="30" rows="3" placeholder="Isi jika memilih alasan 'Lain-lain', kosongkan jika tidak" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="btnFinish">
+                <button type="submit" class="btn btn-primary btnSubmit">Submit</button>
+                <a href="./index.html"><button type="button" class="btn btn-secondary btnBack">Back</button></a>
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        &copy; Nur Ahmad Khatim PWEB-B 2021
+    </div>
+</body>
+</html>
